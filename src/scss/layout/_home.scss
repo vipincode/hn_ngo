@@ -1,0 +1,206 @@
+// ======================================================================
+// HOME [INFO]
+// ======================================================================
+
+#info {
+    @extend %m-80;
+}
+
+.info {
+    article {
+        @extend .center;
+        @include mq('lg') {
+            width: 80%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            margin-top: 30px;
+        }
+    }
+}
+
+// ======================================================================
+// HOME [EVENTS]
+// ======================================================================
+
+#event {
+    @extend %m-80;
+}
+
+.event {
+    @include e('heading') {
+        @extend .center;
+        @extend  %mb-50;
+    }
+
+    @include e('image') { 
+        text-align: right;
+        img {
+            margin: 0 auto;
+        }
+    }
+
+    @include e('card') {
+        margin-bottom: 20px;
+        @include m('content') {
+            h3 {
+                font-size: em(20px);
+                font-weight: $font-weight--md;
+                line-height: (28px/20px);
+            }
+            ul {
+                li {
+                    display: inline-block;
+                    padding: 0px 12px;
+                    font-size: em(14px);
+                    font-weight: $font-weight--md;
+                    color: color(gray);
+                    &:first-child {
+                        padding-left: 0;
+                    }
+                    .fa-clock-o,
+                    .fa-map-marker {
+                        color: color(secondary);
+                    }
+                }
+            }
+        }
+    }
+    @include  e('more') {
+        @extend  .center;
+    }
+}
+
+// ======================================================================
+// HOME [DONATION]
+// ======================================================================
+
+#donation {
+    @extend %img-bg;
+    background-attachment: fixed;
+    padding: 130px 0px;
+    @extend  .center;
+}
+
+.donation {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+    @include e('content') {
+        span {
+            display: block;
+            font-size: em(32px);
+            line-height: (39px/32px);
+            font-weight: $font-weight--xs;
+            @extend .text-upper;
+            color: $white;
+        }
+        h2 {
+            font-size: em(42px);
+            line-height: (58px/42px);
+            margin-bottom: 20px;
+            font-weight: $font-weight--md;
+            @extend .text-upper;
+            color: $white;
+        }
+        p {
+            color: $white;
+            font-size: em(20px);
+            line-height: (34px/20px);
+            margin-bottom: 30px;
+        }
+    }
+    @include e('link') {
+        .btn + .btn {
+            margin-left: 20px;
+        }
+    }
+}
+
+
+// ======================================================================
+// HOME [GALLERY]
+// ======================================================================
+
+#gallery {
+    @extend  %m-80;
+    &-wrap {
+        width: 100%;
+    }
+    overflow: hidden;
+}
+
+.gallery {
+    @include  e('heading') {
+        @extend  .center;
+    }
+
+    @include e('content') {
+        @extend  %mt-50;
+    }
+
+    @include  e('more') {
+        padding: 30px 0px;
+        @extend  .center;
+    }
+}
+
+// ======================================================================
+// HOME [MISSION]
+// ======================================================================
+
+#mission {
+    @extend  %m-80;
+}
+
+.mission {
+    @include e('heading') {
+        @extend .center;
+    }
+}
+
+// ======================================================================
+// HOME [VOLUNTEER]
+// ======================================================================
+
+#volunteer {
+    @extend  %m-80;
+}
+
+// ======================================================================
+// HOME [AWARDS]
+// ======================================================================
+
+#awards {
+    @extend  %m-80;
+}
+
+// ======================================================================
+// HOME [TESTIMONIALS]
+// ======================================================================
+
+#testimonials {
+    @extend  %m-80;
+}
+
+.testimonials {
+    @include e('heading') {
+        @extend .center;
+    }
+}
+
+// ======================================================================
+// HOME [NEWS]
+// ======================================================================
+
+#news {
+    @extend  %m-80;
+}
+
+.news {
+    @include e('heading') {
+        @extend .center;
+    }
+}

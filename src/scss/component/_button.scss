@@ -1,0 +1,73 @@
+// =====================================================================
+// BUTTUN 
+// =====================================================================
+
+%btn {
+    border: none;
+    outline: none;
+    display: inline-block;
+    padding: 7px 20px;
+    font-size: em(15px);
+    font-weight: $font-weight--md;
+    border-radius: 30px;
+    @extend .text-upper;
+    color: $white;
+}
+
+.btn {
+    @extend %btn;
+    @include m('primary') {
+        background-color: color(secondary);
+    }
+
+    @include m('secondary') {
+        border: 2px solid color(secondary);
+        background-color: $white;
+        color: color(secondary);
+        transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+        &:hover {
+            background-color: color(secondary);
+            color: $white;
+        }
+    }
+    @include m('tertiary') {
+        border: 2px solid $white;
+        color: $white;
+        padding: 6px 20px;
+        transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+        &:hover {
+            background-color: $white;
+            color: color(secondary);
+        }
+    }
+}
+
+%sm {
+    border: none;
+    outline: none;
+    display: inline-block;
+    padding: 4px 17px;
+    font-size: em(13px);
+    font-weight: $font-weight--md;
+    border-radius: 30px;
+    @extend .text-upper;
+    color: $white;
+    margin: 20px 0px;
+}
+
+.sm {
+    @extend %sm;
+    @include m('primary') {
+        background-color: color(secondary);
+    }
+    @include m('secondary') {
+        border: 2px solid color(secondary);
+        background-color: $white;
+        color: color(secondary);
+        transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+        &:hover {
+            background-color: color(secondary);
+            color: $white;
+        }
+    }
+}

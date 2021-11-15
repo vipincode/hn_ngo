@@ -1,0 +1,96 @@
+// ======================================================================
+// MIXIN: [BEM]
+// ======================================================================
+
+@mixin e($element) {
+	&__#{$element} {
+		@content;
+	}
+}
+
+@mixin m($modifier) {
+	&--#{$modifier} {
+		@content;
+	}
+}
+
+
+// ======================================================================
+// TRANSITION
+// =======================================================================
+
+@mixin effect($transition:all, $duration: 0.6s, $ease: ease-in-out) {
+	transition: $transition $duration $ease;
+}
+
+
+// =======================================================================
+//  PSEUDO
+// =======================================================================
+
+@mixin p-el($el, $width, $height) {
+	@if $el == "after" or $el == "before" {
+		&:#{$el} {
+			@extend %pseudos;
+			width: $width;
+			height: $height;
+			@content;
+		}
+	}
+	@else {
+		 @warn "`#{$el}` is not a valid pseudo-element.";
+	}
+}
+
+// =======================================================================
+//  ICONS
+// =======================================================================
+
+@mixin icons($el, $width, $height) {
+	@if $el == "after" or $el == "before" {
+		&:#{$el} {
+			@extend %icons;
+			width: $width;
+			height: $height;
+			@content
+		}
+	}
+	@else {
+		 @warn "`#{$el}` is not a valid pseudo-element.";
+	}
+}
+
+// ======================================================================
+// MIXIN: [FLEX BOX]
+// ======================================================================
+
+@mixin flexy($disp: flex, $dir: null, $just: null, $align: null, $wrap: null) {
+	display: $disp;
+	flex-wrap: $wrap;
+	flex-direction: $dir;
+	justify-content: $just;
+	align-items: $align;
+}
+
+// ======================================================================
+// MIXIN: [MEDIA QUERY]
+// ======================================================================
+
+@mixin mq($break) {
+	$value: map-get($breakpoints, $break);
+	$sm: map-get($breakpoints, 'sm');
+
+	@if $value == null {
+		@error "`#{$break}` is not a valid break point";
+	}
+	@else if $value < $sm {
+		@media(max-width: $value) {
+			@content;
+		}
+	}
+	@else {
+		@media(min-width: $value) {
+			@content;
+		}
+	}
+}

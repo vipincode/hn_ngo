@@ -1,0 +1,48 @@
+// ==========================================================================
+// HEADING
+// ==========================================================================
+
+.prim {
+    @include m('heading') {
+        font-size: em(28px);
+        font-weight: $font-weight--lg;
+        line-height: (38px/28px);
+        margin-bottom: 12px;
+        color: $white;
+        @include mq('md') {
+            font-size: em(34px);
+            line-height: (42px/38px);
+        }
+        @include mq('lg') {
+            font-size: em(48px);
+            line-height: (62px/48px);
+        }
+    }
+    @include e('text') {
+        font-size: em(19px);
+        line-height: (32px/19px);
+        font-weight: $font-weight--sm;
+        @include m('white') {
+            color: $white;
+        }
+    }
+}
+
+.main {
+    @include m('heading') {
+        font-size: em(28px);
+        font-weight: $font-weight--lg;
+        line-height: (34px/28px);
+        margin-bottom: 15px;
+      
+    }
+
+    @include e('text') {
+        font-size: em(21px);
+        font-weight: $font-weight--xs;
+        line-height: (30px/21px);
+        @include m('white') {
+            color: $white;
+        }
+    }
+}

@@ -1,0 +1,109 @@
+// ===========================================================================
+// FONT STACK
+// ===========================================================================
+
+$font-stack--google            : 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900';
+$font-family--primary          : 'Roboto', sans-serif;
+
+$font-weight--xs               : 300;
+$font-weight--sm               : 400;
+$font-weight--md               : 500;
+$font-weight--lg               : 700;
+$font-weight--xl               : 900;
+
+// ===========================================================================
+// COLOR
+// ===========================================================================
+
+$light-cornflower-blue          : #8ecae6ff;
+$blue-green                     : #219ebcff;
+$prussian-blue                  : #023047ff;
+$honey-yellow                   : #ffb703ff;
+$orange                         : #fb8500ff;
+
+$primary--color                 : $blue-green;
+$seconday--color                : $orange;
+$black                          : $prussian-blue;
+$white                          : #ffffff;
+$yellow                         : $honey-yellow;
+$gray                           : #84817a;
+
+// ===========================================================================
+// COLOR MAP
+// ===========================================================================
+
+$color        : (
+	gray           :(
+		x-light    : lighten($gray, 45%),
+		light      : lighten($gray, 38%),
+		base       : $gray,
+		dark       : darken($gray, 10%),
+	),
+	black          :(
+		x-light    : lighten($black, 35%),
+		light      : lighten($black, 18%),
+		base       : $black,
+		dark       : darken($black, 10%),
+	),
+	primary        :(
+		x-light    : lighten($primary--color, 35%),
+		light      : lighten($primary--color, 15%),
+		base       : $primary--color,
+		dark       : darken($primary--color, 10%),
+	),
+	secondary      :(
+		x-light    : lighten($seconday--color, 35%),
+		light      : lighten($seconday--color, 15%),
+		base       : $seconday--color,
+		dark       : darken($seconday--color, 10%),
+	),
+);
+
+// ===========================================================================
+// UNITS
+// ===========================================================================
+
+$base-font                      : 16px;
+$base-line                      : 30px;
+$br-radius                      : 4px;
+$br-roundy                      : 50%;
+$letter-space                   : 1px;
+
+
+// ===========================================================================
+// BREAKPINTS
+// ===========================================================================
+
+$breakpoints : (
+	'xs'     : 767px,
+	'sm'     : 768px,
+	'md'     : 1024px,
+	'lg'     : 1280px,
+	'xl'     : 1366px,
+	'x-xl'   : 1920px,
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,153 @@
+// ============================================================================
+// NAVBAR[SOCIALS]
+// ============================================================================
+
+.nav {
+    @include e('wrap') {
+        padding: 0 25px;
+    }
+    @include e('socials') {
+        border-bottom: 1px solid color(gray, light);
+        @include m('content') {
+            ul {
+                li {
+                    display: block;
+                    width: 42px;
+                    border-left: 1px solid color(gray, light);
+                    @extend .center;
+                    &:last-child {
+                        border-right: 1px solid color(gray, light);
+                    }
+                }
+                a {
+                    color: color(gray);
+                    @include effect($transition: color);
+                    &:hover {
+                        color: color(secondary);
+                    }
+                }
+            }
+            @include mq('md') {
+                @include flexy($align: center, $just: space-between);
+                ul {
+                    li {
+                        display: inline-block;
+                    }
+                    a {
+                        display: block;
+                        padding: 8px 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ============================================================================
+// NAVBAR[LOGO]
+// ============================================================================
+
+.nav {
+    @include e('main') {
+        padding: 12px 0px;
+    }
+    @include e('content') {
+        @include mq('md') {
+            @include flexy($just: space-between, $align: center);
+        }
+    }
+    @include e('logo') {
+        @include mq('md') {
+           flex: 1 auto;
+        }
+    }
+    @include e('info') {
+        @include mq('md') {
+            @include flexy($just: space-between, $align: center);
+            flex-basis: 45%;
+        }
+        @include m('item') {
+            h2 {
+                font-size: em(17px);
+                line-height: (28px/17px);
+                color: color(primary);
+                font-weight: $font-weight--lg;
+            }
+            p {
+                font-size: em(16px);
+                line-height: (24px/16px);
+                color: color(gray);
+            }
+        }
+
+        @include m('email') {
+            position: relative;
+            @include icons('before', 42px, 42px) {
+                content: '\f003';
+                color: color(secondary);
+                left: -54px;
+                top: 5px;
+                font-size: em(25px);
+                line-height: (42px/25px);
+                border: 1px solid color(gray, light);
+                border-radius: $br-roundy;
+                @extend .center;
+            }
+        }
+        @include m('contact') {
+            position: relative;
+            @include icons('before', 42px, 42px) {
+                content: '\f2a0';
+                color: color(secondary);
+                left: -54px;
+                top: 5px;
+                font-size: em(25px);
+                line-height: (42px/25px);
+                border: 1px solid color(gray, light);
+                border-radius: $br-roundy;
+                @extend .center;
+            }
+        }
+    }
+}
+
+// ============================================================================
+// NAVBAR[MENU]
+// ============================================================================
+
+.nav {
+    @include e('menu') {
+        background-color: color(primary);
+        border-bottom: 4px solid color(secondary);
+        ul {
+            li {
+                a {
+                    color: $white;
+                    font-weight: $font-weight--md;
+                    letter-spacing: $letter-space;
+                    @include effect($transition: background-color, $duration: 0.4s);
+                    &:hover {
+                        background-color: color(secondary);
+                    }
+                }
+            }
+        }
+        @include m('content') {
+            @include mq('md') {
+                ul {
+                    li {
+                        display: inline-block;
+                        a {
+                            display: block;
+                            padding: 10px 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.link-active {
+    background-color: color(secondary);
+}

@@ -1,0 +1,21 @@
+// ======================================================================
+// CONTAINER
+// ======================================================================
+
+.site-container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0px 15px;
+	@include mq('md') {
+		max-width: 1000px;
+	}
+	@include mq('lg') {
+		max-width: 1240px;
+	}
+	@include mq('xl') {
+		max-width: 1300px;
+	}
+	@include mq('x-xl') {
+		max-width: 1590px;
+	}
+}
